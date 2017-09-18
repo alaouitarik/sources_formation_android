@@ -1,0 +1,56 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="itemAlbumViewModel"
+            type="com.formation.tutoandroidrxjava.viewmodel.ItemAlbumViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/item_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{itemAlbumViewModel::onItemClick}"
+        android:padding="@dimen/spacing_large">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_album"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            tools:imageUrl="@{itemAlbumViewModel.thumbnail}"/>
+
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_album"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_toEndOf="@+id/image_album"
+            android:text="@{itemAlbumViewModel.title}"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text=""/>
+
+        <TextView
+            android:id="@+id/label_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/label_title"
+            android:text="@{itemAlbumViewModel.url}"
+            android:textColor="@android:color/secondary_text_light"
+            android:textSize="14sp"
+            tools:text=""
+            android:layout_alignStart="@+id/label_title" />
+
+
+    </RelativeLayout>
+
+
+</layout>

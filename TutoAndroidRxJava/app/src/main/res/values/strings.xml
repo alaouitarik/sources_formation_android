@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TutoAndroidRxJava</string>
+    <string name="loading">chargement en cours ...</string>
+    <string name="error_loading_album">impossible de charger les albums</string>
+</resources>
